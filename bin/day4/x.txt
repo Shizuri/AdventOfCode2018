@@ -1,0 +1,3 @@
+[1518-02-10 23:47] Guard #631 begins shift
+[1518-02-11 00:03] falls asleep
+[1518-02-11 00:19] wakes up
