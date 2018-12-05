@@ -46,7 +46,7 @@ public class ActualWork {
 //		System.out.println("========================================================================================");
 //		printPolimerCharList(clensed);
 
-		clenseProcessAndPrint(pList);
+		cleanseProcessAndPrint(pList);
 
 //		char ch1 = 'z';
 //		char ch2 = 'Z';
@@ -56,18 +56,18 @@ public class ActualWork {
 
 	}
 
-	private void clenseProcessAndPrint(List<Character> list) {
+	private void cleanseProcessAndPrint(List<Character> list) {
 		char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-		char[] alphabet2 = "v".toCharArray();
+		char[] alphabet2 = "v".toCharArray(); //for testing
 		int size = 0;
 		int minSize = 999999999;
 		char minSizeChar = 'a';
 
 		for (int i = 0; i < alphabet.length; i++) {
 			char ch = alphabet[i];
-			List<Character> theList = clenseListFromChar(list, ch);
+			List<Character> theList = cleanseListFromChar(list, ch);
 
-			// System.out.println("before processing, after clensing:");
+			// System.out.println("before processing, after cleansing:");
 			// printPolimerCharList(theList);
 
 			processPolimer(theList);
@@ -87,7 +87,7 @@ public class ActualWork {
 
 	}
 
-	private List<Character> clenseListFromChar(List<Character> list, char ch) {
+	private List<Character> cleanseListFromChar(List<Character> list, char ch) {
 
 		List<Character> workingList = new ArrayList<>(list);
 		while (workingList.contains(Character.toLowerCase(ch)) || workingList.contains(Character.toUpperCase(ch))) {
