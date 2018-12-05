@@ -27,7 +27,7 @@ public class ActualWork {
 	// private ReadFile rf = new ReadFile();
 
 	public void Start() {
-
+		
 		polimer = usingBufferedReader(filename);
 		turnToArray(polimer);
 
@@ -80,7 +80,7 @@ public class ActualWork {
 //			System.out.println("Showing list clensed of: " + ch);
 //			printPolimerCharList(theList);
 //
-			System.out.println("For char |" + ch + "| size is: " + size);
+			//System.out.println("For char |" + ch + "| size is: " + size);
 //			System.out.println("checking: " + doesPolimerStillNeedProcessing(theList));
 		}
 		System.out.println("MinSize: " + minSize + " for char: " + minSizeChar);
@@ -99,48 +99,11 @@ public class ActualWork {
 					workingList.remove(i);
 				}
 			}
-
-			for (int i = 0; i < workingList.size(); i++) {
-				char ch3 = Character.toUpperCase(ch);
-				char ch4 = Character.toUpperCase(workingList.get(i));
-
-				if (ch3 == ch4) {
-					workingList.remove(i);
-				}
-			}
 		}
 
 		return workingList;
 	}
 
-	private List<Character> clenseListFromChar2OLD(List<Character> list, char ch) {
-
-		List<Character> workingList = new ArrayList<>(list);
-		for (int i = 0; i < workingList.size(); i++) {
-			char ch1 = Character.toLowerCase(ch);
-			char ch2 = Character.toLowerCase(workingList.get(i));
-
-			if (ch1 == ch2) {
-//				System.out.println(ch1 + " ch1");
-//				System.out.println(ch2 + " ch2");
-				Character remove = workingList.remove(i);
-//				System.out.println("removed " + remove);
-			}
-		}
-
-		for (int i = 0; i < workingList.size(); i++) {
-			char ch3 = Character.toUpperCase(ch);
-			char ch4 = Character.toUpperCase(workingList.get(i));
-
-			if (ch3 == ch4) {
-//				System.out.println(ch1 + " ch1");
-//				System.out.println(ch2 + " ch2");
-				Character remove = workingList.remove(i);
-//				System.out.println("removed " + remove);
-			}
-		}
-		return workingList;
-	}
 
 	private boolean doesPolimerStillNeedProcessing(List<Character> pList) {
 		for (int i = 0; i < pList.size() - 1; i++) {
