@@ -1,20 +1,10 @@
 package day5;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-
-import reader.ReadFile;
 
 public class ActualWork {
 
@@ -58,7 +48,7 @@ public class ActualWork {
 
 	private void cleanseProcessAndPrint(List<Character> list) {
 		char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-		char[] alphabet2 = "v".toCharArray(); //for testing
+		//char[] alphabet2 = "v".toCharArray(); //for testing
 		int size = 0;
 		int minSize = 999999999;
 		char minSizeChar = 'a';
@@ -120,7 +110,7 @@ public class ActualWork {
 	}
 
 	private void processPolimer(List<Character> pList) {
-		int processNumber = 0;
+		//int processNumber = 0;
 
 		while (doesPolimerStillNeedProcessing(pList)) {
 			for (int i = 0; i < pList.size() - 1; i++) {
@@ -135,7 +125,7 @@ public class ActualWork {
 					}
 				}
 			}
-			processNumber++;
+			//processNumber++;
 			// System.out.println("Process number: " + processNumber);
 		}
 
@@ -147,18 +137,18 @@ public class ActualWork {
 		}
 	}
 
-	private void printPolimerCharList(List<Character> pList) {
-		for (int i = 0; i < pList.size(); i++) {
-			System.out.print(pList.get(i));
-			if (i != 0) {
-				if (i % 100 == 0) {
-					System.out.println();
-				}
-			}
-		}
-		System.out.println();
-		System.out.println();
-	}
+//	private void printPolimerCharList(List<Character> pList) {
+//		for (int i = 0; i < pList.size(); i++) {
+//			System.out.print(pList.get(i));
+//			if (i != 0) {
+//				if (i % 100 == 0) {
+//					System.out.println();
+//				}
+//			}
+//		}
+//		System.out.println();
+//		System.out.println();
+//	}
 
 //	private void printString(String inputS) {
 //		
